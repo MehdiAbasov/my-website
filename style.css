@@ -282,8 +282,8 @@ svg {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    color:#000;
 }
+
 
 .contact-form {
     padding: 0 250px;
@@ -301,6 +301,7 @@ svg {
 .form-btn input {
     background-color: #fff;
     outline: none;
+    color:#000;
     border: 1px solid rgb(118, 104, 175);
     border-radius: 40px;
     width: 200px;
