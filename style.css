@@ -282,6 +282,7 @@ svg {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    color:#000;
 }
 
 .contact-form {
