@@ -439,6 +439,15 @@ svg {
     }
 }
 
+@media (max-width: 450px) {
+    .footer-links {
+        flex-direction: column !important;
+        align-items: center;
+    }
+    .footer-links a {
+        margin: 0px !important;
+    }
+}
 .overlay-nav {
     width: 80%;
     height: 100vh;
@@ -492,4 +501,26 @@ svg {
 
 .transform-x {
     transform: translateX(0px);
+}
+
+.klik-element {
+    width: 40px;
+    height: 40px;
+    color: #2d2d2d;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 10px;
+    cursor: pointer;
+    right: 20px;
+    z-index: 1;
+    justify-content: center;
+    transition: 0.5s ease-in-out;
+    border-radius: 50%;
+    border: 2px solid rgb(118, 104, 175);
+}
+
+.klik-element:hover {
+    background-color: rgb(118, 104, 175);
+    color: #fff;
 }

@@ -48,7 +48,7 @@
         </div>
     </nav>
 
-    <div class="home">
+    <div class="home" id="home">
         <div class="overlay"></div>
         <div class="h-content-container">
             <h1>salam!</h1>
@@ -57,7 +57,9 @@
             <a href="#contact">Contact</a>
         </div>
     </div>
-
+    <div class="klik-element" id="clickElement">
+        <i class="fa-solid fa-arrow-down"></i>
+    </div>
     <div class="about-me" id="about-me">
         <div class="container">
             <div class="row">
@@ -202,7 +204,7 @@
     </div>
 
     <footer class="footer">
-        <div class="container"> 
+        <div class="container">
             <div class="row">
                 <div style="color: #000;" class="footer-logo col-xl-4 col-lg-12 logo">
                     M.Abasov
@@ -221,6 +223,7 @@
             </div>
         </div>
     </footer>
+
     <script>
         const nav = document.getElementById('navbar-container')
         window.addEventListener('scroll', function () {
@@ -240,6 +243,34 @@
         xmarkIcon.addEventListener('click', function () {
             overlayNav.classList.remove('transform-x')
         })
+
+        const clikElement = document.getElementById('clickElement');
+        const basliklar = [
+            document.getElementById('about-me'),
+            document.getElementById('services'),
+            document.getElementById('portfolio'),
+            document.getElementById('contact'),
+            document.getElementById('home')
+        ];
+
+        let currentIndex = 0;
+        // Elementleri sırayla gezin
+
+        // Öğeye tıklama olayını ekle
+        clikElement.addEventListener('click', function () {
+            // Tüm başlıkları seç
+            if (currentIndex < basliklar.length) {
+                // Şu anki başlığı sayfanın üst kısmına getir
+                basliklar[currentIndex].scrollIntoView({ behavior: 'smooth', block: 'start' });
+                currentIndex++;
+            }
+            else {
+                // Tüm başlıklar işlendikten sonra, başa dön
+                currentIndex = 0;
+                basliklar[currentIndex].scrollIntoView({ behavior: 'smooth', block: 'start' });
+                currentIndex++;
+            }
+        });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
